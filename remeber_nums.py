@@ -13,7 +13,11 @@ print("Запомните числа")
 print(nums)
 input("нажмите enter для продолжения")
 
-os.system("cls")
+os_name = os.name
+if os_name  == "nt":
+    os.system("cls")
+else:
+    os.system("clear")
 
 i = random.randint(1, len(nums))
 
